@@ -2,7 +2,9 @@ cd $HOME
 git clone --separate-git-dir=$HOME/.dotfiles git@github.com:nexsych/dotfiles.git tmpdotfiles
 rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
 
-mkdir aud dl doc img vid
+mkdir -p aud dl doc img/paper vid
+
+ln -s .local/share/wallhaven-l3prel.png img/paper/wallhaven-l3prel.png
 
 # dwmset
 git clone git@github.com:nexsych/dwmset.git .local/src/dwmset
