@@ -13,7 +13,7 @@ Layout:
 |Mount point|Partition|Partition type|Size|
 |-|-|-|-|
 |/mnt/boot|/dev/sda1|EFI system partition|550 MiB|
-|[SWAP]|/dev/sda2|Linux swap|2 GiB|
+|[SWAP]|/dev/sda2|Linux swap|8 GiB|
 |/mnt|/dev/sda3|Linux x86-64 root (/)|Remainder of the disk|
 ### Format the partitions
 ```
@@ -25,7 +25,7 @@ Layout:
 ```
 # mount /dev/sda3 /mnt
 # mount --mkdir /dev/sda1 /mnt/boot
-# swapon /dev/swap_partition
+# swapon /dev/sda2
 ```
 ## Installation
 ```
